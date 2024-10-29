@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title> Rock, Paper and Scissors game</title>
+    </head> 
+    <body>
+<div align="center">
+		<img id="myImg" src="rock_paper_sc.png" width="230" height="220">
+
+		<h2 id ='rules' style.border= "#00000F" >The Winning Rules are as follows:</br></br>
+			Rock smashes Scissors.</br>Paper covers Rock.</br>Scissors cut Paper.</br>
+			</h2>
+	
+        <div id ="text1" align="center"><h1>Let's play</h1></div> 
+		<div id ="text" align="center"><h2>Choose Rock, Paper or Scissors</h2></div> 
+</div>	
+
+ <div id = "btnParent" align="center">
+		<button style="height:200px;width:200px" id="Rock"  type= "button" onclick="myFunction(this.id)">ROCK</button>        
+        <button style="height:200px;width:200px" id="Paper"  type= "button" onclick="myFunction(this.id)">PAPER</button>
+		<button style="height:200px;width:200px" id="Scissors"  type= "button" onclick="myFunction(this.id)">SCISSORS</button>
+        
+        </div>
+<script>
+
+function myFunction(btnClicked) {
+
+		let name = btnClicked +".png";
+			document.getElementById("myImg").src = name;
+			playGame(btnClicked);
+	}
+
+function playGame(btnClicked){
+	let x = btnClicked;
+	let CompSelection = "";
+		const rand = Math.floor(Math.random() * 9) + 1;			// generating random number between 1 and 9
+		let txt = document.getElementById("text1");
+		txt.innerHTML ="bum";
+			if ( rand%3 == 0 ){										// rock if random no 3, 6 or 9
+				CompSelection = "Rock";
+				}
+			else if ( rand%2 == 0 ){								// paper if random no 2, 4 or 8
+				CompSelection = "Paper";
+				}
+			else {													//Scissors for other (1, 5, 7)
+				CompSelection = "Scissors";
+				}
+			// displaying players and computer's selections 
+				txt.innerHTML = " Your choice:  " +x +"<br>My random choice: " +CompSelection;
+				txt.style.fontSize = "200%";	
+				txt.style.width = "20%";
+				txt.style.border = "thick solid #0000FF";
+
+		if ( x == CompSelection){								// checking if same choice made
+			txt.innerHTML += "<br>It's a DRAW<BR>Try again.";
+			}
+			
+		// when player won
+		else if ( (x == "Rock" && CompSelection == "Scissors") || (x == "Paper" && CompSelection == "Rock") ||
+				(x == "Scissors" && CompSelection == "Paper")  ){
+			txt.innerHTML += "<br>You WON<BR>Try again.";
+		}
+		//player lost
+		else {
+		txt.innerHTML += "<br>You Lost<BR>Try again.";
+		}
+		
+		
+	}
+</script>
+
+</body>
+</html>
