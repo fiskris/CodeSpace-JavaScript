@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+const n = 9;
+let sum = 0;
+
+const numbers = new Array(n); 		// declaring array
+
+for (let i = 0; i < numbers.length; i++){			//filling in an array with increasing integers
+		numbers[i] = i + 1;
+		document.write( numbers[i] +"<br>" );	// displaying arrays elements
+		}
+ for ( let i = 0; i < numbers.length; i++) {								// loop for adding array's elements
+     
+	 sum += numbers[i];
+	 }
+  
+  document.write( sum +"<br>" );
+
+ 
+
+</script>
+
+</body>
+</html>

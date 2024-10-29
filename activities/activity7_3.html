@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>Function to check if number is prime number.</p>
+
+<script>
+
+// take input from the user
+	let a = Number(window.prompt("Enter a number: ", 3));
+	
+// function to check if prime
+function checkPrime(a){
+
+if ( a < 1){
+ document.write( "Your number ", a + " is not a prime number"); //checking if not negative or 0
+ }
+else if ( a == 1 || a == 2){									// if 1 or 2 then it's prime
+		document.write( "your no ", a +" is a prime number"+ "<br>");
+		} 
+ else {
+	let i = 2;
+   while ( a%i != 0 && i < a ){
+		i++;
+		}
+		document.write( "ok! i = ", i + " is the next after 1 factor of ", a + "<br>");					// displaying smallest factor( > 1) of number 'a' 
+		if ( i == a){											// if 'while' loop run till the end then it's prime
+		document.write( "number ", i +" is a prime number"+ "<br>");	//'i' should be equal to 'a'
+		}
+		else{													// otherwise it's not - loop was stopped
+		document.write( "number ", a +" is not a prime number"+ "<br>");
+		}								
+	}	
+}
+document.write("<p><h2>");
+checkPrime(a);
+document.write("</h2></p>");
+	
+</script>
+ 
+</body>
+</html>

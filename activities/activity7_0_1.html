@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+function add(a, b){    
+			return a + b;			
+			}
+ 	
+	// take input from the user
+//	let a = Number(window.prompt("Enter a first number: ", 2));
+//	let b = Number(window.prompt("Enter a second number: ", 4));
+//alternative option
+let a = parseFloat(prompt("Enter first number: ", 7));
+let b = parseFloat(prompt("Enter second number: ", 9));
+	
+	
+	let summary = add( a, b);
+    document.write( "result of adding your numbers ", summary +"<br>" );
+</script>
+
+</body>
+</html>

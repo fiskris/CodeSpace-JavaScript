@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+
+let sum = 0, avg = 0;
+
+const numbers = [20, 30, 25, 35, -16, 60, -100]; 		// declaring array and assigning values
+
+ for ( let i = 0; i < numbers.length; i++) {								// loop for adding array's elements
+     
+	 sum += numbers[i];
+	 }
+  
+  document.write( sum +"<br>" );						//display sum
+  
+  
+avg = sum/ (numbers.length);							// calculating avg 
+ document.write( avg +"<br>" );							//display avg
+
+</script>
+
+</body>
+</html>

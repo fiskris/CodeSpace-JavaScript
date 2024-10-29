@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+
+
+
+const numbers = [10, 2, 3, 4, 7, 43, -44]; 		// declaring array and assigning values
+const numbers2 = [100, 20, 36, 49, 7, 43, -44]
+
+// function to print array content the way is declared - in comment as list
+ function printArray(numbers){				
+ document.write( "[ " );
+ for ( let i = 0; i < numbers.length -1; i++) {								// 
+//     document.write( "element no ", (i + 1) +"  ", numbers[i] +"<br>" );
+		document.write( numbers[i] +", " );
+	}	
+	document.write( numbers[numbers.length-1] );
+    document.write( "] " +"<br>" );	
+}	
+
+// function to find max value in array
+function findMax(numbers){
+	let max = numbers[0];
+
+   for ( let i = 0; i < numbers.length; i++) {								
+     
+	if ( numbers[i] > max ){									// loop for comparing max with arreys elements
+		max = numbers[i];										// if bigger number then overwrighting
+		}
+	}
+	
+	document.write( "Maximum value for the array : ", max +"<br>" );
+}	
+	printArray(numbers)	
+	findMax(numbers)
+   printArray(numbers2)	
+	findMax(numbers2)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+
+const numbers = [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]; 		// declaring array and assigning values
+
+ let max = numbers[0], min = numbers[0];						//assigning value of min and max equal to first element to 
+ 
+ for ( let i = 0; i < numbers.length; i++) {								// loop for searching max and min
+     
+	if ( numbers[i] > max ){									// loop for comparing max with arreys elements
+		max = numbers[i];										// if bigger number then overwrighting
+		}
+	if ( numbers[i] < min ){
+		min = numbers[i]
+		}
+}					
+ document.write( "Maximum value for the array : ", max +"<br>" );						//display max
+ document.write( "Minimum value for the array :",  min +"<br>" );							//display min
+
+</script>
+
+</body>
+</html>

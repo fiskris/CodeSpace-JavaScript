@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+
+const sign1 = Number(window.prompt('Input the first number', 1524)); 		// asking for first no and asigning it to sign1, default 2
+const sign2 = Number(window.prompt('Input the second number', 2345));		// as above
+const sign3 = Number(window.prompt('Input the second number', 3321));		// as above
+		
+ if ( sign1 < sign2 && sign2 < sign3) {								// checking if increasing
+    alert('Increasing order. Your numbers: ' +sign1 +', '  +sign2 +', '  +sign3);
+     }
+	 else if (sign1 > sign2 && sign2 > sign3) {	//checking if decreasing
+	 alert('Decreasing order. Your numbers: ' +sign1 +', '  +sign2 +', '  +sign3);
+	 }
+  else {
+  alert('Neither increasing or decreasing order. Your numbers: ' +sign1 +', '  +sign2 +', '  +sign3);
+  }
+ 
+
+</script>
+
+</body>
+</html>

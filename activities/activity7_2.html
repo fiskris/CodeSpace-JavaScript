@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>Function to calculate factorial.</p>
+
+<script>
+
+// take input from the user
+	let a = Number(window.prompt("Enter a number: ", 2));
+	let factor = 1;   //declaring factorial 
+	
+// function to find factorial
+function findFactorial(a){
+
+if ( a < 0){
+ document.write( "Factorial can be calculated only for positive numbers"); //checking if not negative
+ }
+//else if  (a == 0 || a == 1){
+//   document.write( "Factorial of ", a +"! = ", factor +"<br>" );
+// }
+ else {
+   factor = 1;
+   for ( let i = 2; i <= a; i++) {									//multiplying 	if number >1	
+     factor *= i;
+	}
+	document.write( "ok" + "<br>");									// ok if function completed
+	document.write( "Factorial of ", a +"! = ", factor +"<br>" );	//displaying result
+
+}	
+}
+	findFactorial(a);
+	
+</script>
+ 
+</body>
+</html>
