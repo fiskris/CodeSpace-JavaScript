@@ -51,6 +51,7 @@ function playGame(btnClicked){
 				txt.style.fontSize = "200%";	
 				txt.style.width = "20%";
 				txt.style.border = "thick solid #0000FF";
+				txt.style.background = "#A5E0FA";
 
 		if ( x == CompSelection){								// checking if same choice made
 			txt.innerHTML += "<br>It's a DRAW<BR>Try again.";
@@ -60,10 +61,14 @@ function playGame(btnClicked){
 		else if ( (x == "Rock" && CompSelection == "Scissors") || (x == "Paper" && CompSelection == "Rock") ||
 				(x == "Scissors" && CompSelection == "Paper")  ){
 			txt.innerHTML += "<br>You WON<BR>Try again.";
+			txt.style.border = "thick solid green";
+			txt.style.background = "#37FA5D";
 		}
 		//player lost
 		else {
 		txt.innerHTML += "<br>You Lost<BR>Try again.";
+		txt.style.border = "thick solid red";
+		txt.style.background = "#F09997";
 		}
 		
 		
